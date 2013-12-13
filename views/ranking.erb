@@ -1,0 +1,5 @@
+<h1>ランキング</h1>
+<% @votes.each do |vote| %>
+  <h2><%= vote.name %></h2>
+  <p><%= vote.reason %></p>
+<% end %>

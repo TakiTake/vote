@@ -1,0 +1,11 @@
+<form method="POST">
+  <% unless @vote.error[:name].nil? %>
+    <p><%= @vote.error[:name] %></p>
+  <% end %>
+  <input type="text" name="name" value="<%= @vote.name %>" />
+  <% unless @vote.error[:reason].nil? %>
+    <p><%= @vote.error[:reason] %></p>
+  <% end %>
+  <textarea name="reason"><%= @vote.reason %></textarea>
+  <button type="submit">投票</button>
+</form>
